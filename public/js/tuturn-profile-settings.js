@@ -85,7 +85,7 @@
 								  if (response.type === 'success') {
 									stickyAlert(response.title, response.message, {
 									  classList: 'success',
-									  autoclose: 3000,
+									  autoclose: 10000,
 									});
 									window.location.replace(response.redirect);
 								  } else {
@@ -897,7 +897,7 @@
 							img = null;
 						// if rule has been violated in one way or another, trigger an error
 							if (!result) {
-								stickyAlert(scripts_vars.error_title, scripts_vars.prof_min_image_width_msg, {classList: 'danger', autoclose: 3000});
+								stickyAlert(scripts_vars.error_title, scripts_vars.prof_min_image_width_msg, {classList: 'danger', autoclose: 10000});
 						}
 							cb(result);
 						}
@@ -920,7 +920,7 @@
 					
 						// if rule has been violated in one way or another, trigger an error
 							if (!result) {
-								stickyAlert(scripts_vars.error_title, scripts_vars.prof_min_image_height_msg, {classList: 'danger', autoclose: 3000});
+								stickyAlert(scripts_vars.error_title, scripts_vars.prof_min_image_height_msg, {classList: 'danger', autoclose: 10000});
 						}
 							cb(result);
 						}
@@ -944,7 +944,7 @@
 					
 						// if rule has been violated in one way or another, trigger an error
 							if (!result) {
-								stickyAlert(scripts_vars.error_title, scripts_vars.prof_mx_image_width_msg, {classList: 'danger', autoclose: 3000});
+								stickyAlert(scripts_vars.error_title, scripts_vars.prof_mx_image_width_msg, {classList: 'danger', autoclose: 10000});
 						}
 							cb(result);
 						}
@@ -968,7 +968,7 @@
 					
 						// if rule has been violated in one way or another, trigger an error
 							if (!result) {
-								stickyAlert(scripts_vars.error_title, scripts_vars.prof_mx_image_height_msg, {classList: 'danger', autoclose: 3000});
+								stickyAlert(scripts_vars.error_title, scripts_vars.prof_mx_image_height_msg, {classList: 'danger', autoclose: 10000});
 						}
 							cb(result);
 						}
@@ -1052,7 +1052,7 @@
 							StickyAlert('', response.message, {classList: 'danger', autoclose: 5000});
 						}
 					} catch (err) {
-						stickyAlert('', scripts_vars.invalid_image, {classList: 'danger', autoclose: 3000});
+						stickyAlert('', scripts_vars.invalid_image, {classList: 'danger', autoclose: 10000});
 					}
 					
 				});
@@ -1188,10 +1188,10 @@
 					_this.attr("disabled", false);
 					jQuery('body').find('.tuturn-preloader-section').remove();	
  					if (response.type == 'success') {
-						stickyAlert(response.title, response.message, {classList: 'success', autoclose: 3000});
+						stickyAlert(response.title, response.message, {classList: 'success', autoclose: 10000});
 						window.location.reload();
 					} else {
-						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 3000});
+						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 10000});
 					}
 				}
 			});
@@ -1274,13 +1274,13 @@
 			
 			if( education_degree_title	==  '' || education_institute_title == '' || tu_education_description == '' || education_institute_location == ''){
 				jQuery('.tuturn-preloader-section').remove();
-				stickyAlert('', scripts_vars.required_fields, {classList: 'danger', autoclose: 3000});
+				stickyAlert('', scripts_vars.required_fields, {classList: 'danger', autoclose: 10000});
 				return;
 			}
 			if(tu_edu_deg_dis_able	== ''){
 				if(   tu_education_start_date == '') {
 					jQuery('.tuturn-preloader-section').remove();
-					stickyAlert('', scripts_vars.required_fields, {classList: 'danger', autoclose: 3000});
+					stickyAlert('', scripts_vars.required_fields, {classList: 'danger', autoclose: 10000});
 					return;
 				}				 
 			}
@@ -1410,7 +1410,7 @@
 						}
 						jQuery('#tuturn-modal-popup').modal('show');
 					} else {
-						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 3000});
+						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 10000});
 					}
 				}
 			});
@@ -1473,7 +1473,7 @@
 						jQuery('#tu-profile-sub-categories').html(sub_categories);
 						jQuery('#tu-profile-sub-categories-drop-down').select2({allowClear: true, minimumResultsForSearch: Infinity});
 					} else {
-						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 3000});
+						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 10000});
 					}
 				}
 			});
@@ -1528,7 +1528,7 @@
 										window.location = response.redirect;
 									}, 900);
 								} else {
-									stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 3000});
+									stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 10000});
 								}
 							}
 						});
@@ -1607,7 +1607,7 @@
 						}, 900);
 
 					} else {
-						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 3000});
+						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 10000});
 					}
 				}
 			});
@@ -1663,7 +1663,7 @@
 									}, 900);
 
 								} else {
-									stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 3000});
+									stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 10000});
 								}
 							}
 						});
@@ -1708,9 +1708,9 @@
 					jQuery('.tuturn-preloader-section').remove();
 					if (response.type === 'success') {
 						jQuery('#tuturn-modal-popup').modal('hide');
-						stickyAlert(response.title, response.message, { classList: 'success', autoclose: 3000 });
+						stickyAlert(response.title, response.message, { classList: 'success', autoclose: 10000 });
 					} else {
-						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 3000});
+						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 10000});
 					}
 					setTimeout(function () {
 						window.location = response.redirect;
@@ -1766,7 +1766,7 @@
 						
 						jQuery('#tuturn-modal-popup').modal('hide');
 					} else {
-						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 3000});
+						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 10000});
 					}
 				}
 			});
@@ -2028,11 +2028,11 @@
 					jQuery('#tu_video_url').val("");
 					jQuery('#tu_add_video_url').attr('disabled', true);
 				} else {
-					stickyAlert('Validation Error', 'Fill add the valid url', {classList: 'danger', autoclose: 3000});
+					stickyAlert('Validation Error', 'Fill add the valid url', {classList: 'danger', autoclose: 10000});
 					return;
 				}
 			} else {
-				stickyAlert('Validation Error', 'You can olny add '+item_limit+ ' media items', {classList: 'danger', autoclose: 3000});
+				stickyAlert('Validation Error', 'You can olny add '+item_limit+ ' media items', {classList: 'danger', autoclose: 10000});
 				return;
 			}
 			
@@ -2083,10 +2083,10 @@
 					_this.removeClass("tu-btnloader")
 					if (response.type === 'success') {
 						jQuery('.tuturn-modal-popup').modal('hide');
-						stickyAlert(response.title, response.message, {classList: 'success', autoclose: 3000});
+						stickyAlert(response.title, response.message, {classList: 'success', autoclose: 10000});
 						window.location.reload();
 					} else {
-						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 3000});
+						stickyAlert(response.title, response.message, {classList: 'danger', autoclose: 10000});
 					}
 				}
 			});
@@ -2165,7 +2165,7 @@
 			
 				// if rule has been violated in one way or another, trigger an error
 					if (!result) {
-						stickyAlert(scripts_vars.error_title, scripts_vars.prof_min_image_width_msg, {classList: 'danger', autoclose: 3000});
+						stickyAlert(scripts_vars.error_title, scripts_vars.prof_min_image_width_msg, {classList: 'danger', autoclose: 10000});
 				}
 					cb(result);
 				}
@@ -2190,7 +2190,7 @@
 			
 				// if rule has been violated in one way or another, trigger an error
 					if (!result) {
-						stickyAlert(scripts_vars.error_title, scripts_vars.prof_min_image_height_msg, {classList: 'danger', autoclose: 3000});
+						stickyAlert(scripts_vars.error_title, scripts_vars.prof_min_image_height_msg, {classList: 'danger', autoclose: 10000});
 				}
 					cb(result);
 				}
@@ -2214,7 +2214,7 @@
 			
 				// if rule has been violated in one way or another, trigger an error
 					if (!result) {
-						stickyAlert(scripts_vars.error_title, scripts_vars.prof_mx_image_width_msg, {classList: 'danger', autoclose: 3000});
+						stickyAlert(scripts_vars.error_title, scripts_vars.prof_mx_image_width_msg, {classList: 'danger', autoclose: 10000});
 				}
 					cb(result);
 				}
@@ -2238,7 +2238,7 @@
 			
 				// if rule has been violated in one way or another, trigger an error
 					if (!result) {
-						stickyAlert(scripts_vars.error_title, scripts_vars.prof_mx_image_height_msg, {classList: 'danger', autoclose: 3000});
+						stickyAlert(scripts_vars.error_title, scripts_vars.prof_mx_image_height_msg, {classList: 'danger', autoclose: 10000});
 				}
 					cb(result);
 				}
@@ -2268,7 +2268,7 @@
 
 			if(maxCountError){
 				plupUploader.refresh();
-				stickyAlert('Error', 'Too many files uploaded', {classList: 'danger', autoclose: 3000});
+				stickyAlert('Error', 'Too many files uploaded', {classList: 'danger', autoclose: 10000});
 			}
 
 			if( templateID == 'usefull-load-attachment'){
@@ -2346,7 +2346,7 @@
 			if (err.code == '-600') {
 				errorMessage = 'You can only upload '+ scripts_vars.upload_max_file_size +' maximum file size';
 			}
-			stickyAlert('Error', errorMessage, {classList: 'danger', autoclose: 3000});
+			stickyAlert('Error', errorMessage, {classList: 'danger', autoclose: 10000});
 		});
 
 		// uploaded File
@@ -2356,12 +2356,12 @@
 				if (response.type === 'success') {
 					window[uploadedFileFun](up, file, response );
 				} else {
-					stickyAlert('', response.message, {classList: 'danger', autoclose: 3000});
+					stickyAlert('', response.message, {classList: 'danger', autoclose: 10000});
 				}
 			} catch (err) {
 				// Do something about the exception here
 				jQuery('li#tu_file_' + file.id).remove();
-				stickyAlert('', scripts_vars.invalid_image, {classList: 'danger', autoclose: 3000});
+				stickyAlert('', scripts_vars.invalid_image, {classList: 'danger', autoclose: 10000});
 			}
 			
 			jQuery('li#tu_file_' + file.id + " .progress").removeClass('tuturn-infouploading');

@@ -411,12 +411,12 @@
 				success: function (response) {
 					jQuery('.tuturn-preloader-section').remove();
 					if (response.type === 'success') {
-						stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 3000});
+						stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 10000});
 						setTimeout(function(){ 
 							window.location.reload();
 						}, 2000);
 					} else {						
-						stickyAdminAlert(response.title, response.message, {classList: 'important', autoclose: 3000});
+						stickyAdminAlert(response.title, response.message, {classList: 'important', autoclose: 10000});
 					}
 				}
 			}, admin_scripts_vars.order_status_title, admin_scripts_vars.order_status_message);
@@ -443,13 +443,13 @@
 				success: function (response) {
 					jQuery('.tuturn-preloader-section').remove();
 					if (response.type === 'success') {
-						stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 3000});
+						stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 10000});
 						setTimeout(function(){ 
 							window.location.reload();
 						}, 2000);
 					} else {						
 						_this.removeAttr("disabled");
-						stickyAdminAlert(response.title, response.message, {classList: 'important', autoclose: 3000});
+						stickyAdminAlert(response.title, response.message, {classList: 'important', autoclose: 10000});
 					}
 				}
 			});
@@ -476,13 +476,13 @@
 				success: function (response) {
 					jQuery('.tuturn-preloader-section').remove();
 					if (response.type === 'success') {
-						stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 3000});
+						stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 10000});
 						setTimeout(function(){ 
 							window.location.reload();
 						}, 2000);
 					} else {						
 						_this.removeAttr("disabled");
-						stickyAdminAlert(response.title, response.message, {classList: 'important', autoclose: 3000});
+						stickyAdminAlert(response.title, response.message, {classList: 'important', autoclose: 10000});
 					}
 				}
 			});
@@ -503,13 +503,13 @@
 				success: function (response) {
 					jQuery('.tuturn-preloader-section').remove();
 					if (response.type === 'success') {
-						stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 3000});
+						stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 10000});
 						setTimeout(function(){ 
 							window.location.reload();
 						}, 2000);
 					} else {						
 						_this.removeAttr("disabled");
-						stickyAdminAlert(response.title, response.message, {classList: 'important', autoclose: 3000});
+						stickyAdminAlert(response.title, response.message, {classList: 'important', autoclose: 10000});
 					}
 				}
 			});
@@ -523,7 +523,7 @@
 
 			if(epv_purchase_code == '' || epv_purchase_code == null){
 				let epv_purchase_code_title = jQuery('#tuturn_purchase_code').attr('title');
-				stickyAdminAlert('', epv_purchase_code_title, {classList: 'important', autoclose: 3000});
+				stickyAdminAlert('', epv_purchase_code_title, {classList: 'important', autoclose: 10000});
 				return false;
 			} else {
 				_this.attr('disabled', 'disabled');
@@ -541,14 +541,14 @@
 				success: function (response) {
 					jQuery('.tuturn-preloader-section').remove();
 					if (response.type === 'success') {	
-						stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 3000});
+						stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 10000});
 						setTimeout(function(){ 
 							window.location.reload();
 						}, 2000);
 					} else {
 						
 						_this.removeAttr("disabled");
-						stickyAdminAlert(response.title, response.message, {classList: 'important', autoclose: 3000});
+						stickyAdminAlert(response.title, response.message, {classList: 'important', autoclose: 10000});
 					}
 				}
 			});
@@ -562,7 +562,7 @@
 
 			if(epv_purchase_code == '' || epv_purchase_code == null){
 				let epv_purchase_code_title = jQuery('#tuturn_purchase_code').attr('title');
-				stickyAdminAlert('', epv_purchase_code_title, {classList: 'important', autoclose: 3000});
+				stickyAdminAlert('', epv_purchase_code_title, {classList: 'important', autoclose: 10000});
 				return false;
 			} else {
 				_this.attr('disabled', 'disabled');
@@ -581,13 +581,13 @@
 				success: function (response) {
 					jQuery('.tuturn-preloader-section').remove();
 					if (response.type === 'success') {
-						stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 3000});
+						stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 10000});
 						setTimeout(function(){ 
 							window.location.reload();
 						}, 2000);
 					} else {						
 						_this.removeAttr("disabled");
-						stickyAdminAlert(response.title, response.message, {classList: 'important', autoclose: 3000});
+						stickyAdminAlert(response.title, response.message, {classList: 'important', autoclose: 10000});
 					}
 				}
 			});
@@ -620,7 +620,7 @@
 								data: dataString,
 								success: function(response) {
 									jQuery('#import-users').find('.inportusers').remove();
-									stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 3000});
+									stickyAdminAlert(response.title, response.message, {classList: 'success', autoclose: 10000});
 									setTimeout(function(){ 
 										window.location.reload();
 									}, 2000);
@@ -712,10 +712,10 @@
 					success: function (response) {
 						jQuery('.tuturn-preloader-section').remove();
 						if (response.type === 'success') {
-							stickyAdminAlert(response.title, response.message, { classList: 'success', autoclose: 3000 });
+							stickyAdminAlert(response.title, response.message, { classList: 'success', autoclose: 10000 });
 							window.location.reload();
 						} else {
-							stickyAdminAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+							stickyAdminAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
 						}
 					}
 				}, admin_scripts_vars.withdraw_title, admin_scripts_vars.withdraw_desc);

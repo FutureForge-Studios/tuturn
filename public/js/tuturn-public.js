@@ -417,10 +417,10 @@ var unavailable_days_slots = [];
                 success: function(response) {
                     jQuery('body').find('.tuturn-preloader-section').remove();
                     if (response.type === 'success') {
-                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 10000 });
                         window.location.replace(response.redirect);
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             });
@@ -448,9 +448,9 @@ var unavailable_days_slots = [];
                 success: function(response) {
                     jQuery('body').find('.tuturn-preloader-section').remove();
                     if (response.type === 'success') {
-                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 10000 });
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             });
@@ -473,10 +473,10 @@ var unavailable_days_slots = [];
                 success: function (response) {
                     jQuery('body').find('.tuturn-preloader-section').remove();
                     if (response.type === 'success') {
-                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 10000 });
                         window.location.replace(response.redirect);
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             });
@@ -531,12 +531,12 @@ var unavailable_days_slots = [];
                     jQuery('body').find('.tuturn-preloader-section').remove();
                     if (response.type === 'success') {
 
-                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 10000 });
                         window.setTimeout(function() {
                             window.location.href = response.checkout_url;
                         }, 2000);
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'important', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'important', autoclose: 10000 });
                     }
                 }
             });
@@ -564,7 +564,7 @@ var unavailable_days_slots = [];
                             jQuery("#tu-subcategories-instructor li:nth-child(n+6)").hide();
                         }
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             }, true);
@@ -598,7 +598,7 @@ var unavailable_days_slots = [];
                             _this.children("i.icon-heart").removeClass("tu-colorred");
                         }
                         _this.children("span").text(response.statusText);
-                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 10000 });
                     } else {
 
                         if (response.login) {
@@ -606,7 +606,7 @@ var unavailable_days_slots = [];
                                 window.location.href = response.login;
                             }, 100);
                         } else {
-                            stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                            stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                         }
                     }
                 }
@@ -636,7 +636,7 @@ var unavailable_days_slots = [];
                     jQuery('body').find('.tuturn-preloader-section').remove();
                     if (response.type === 'success') {
 
-                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 10000 });
                         window.location.reload();
 
                     } else {
@@ -646,7 +646,7 @@ var unavailable_days_slots = [];
                                 window.location.href = response.login;
                             }, 100);
                         } else {
-                            stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                            stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                         }
                     }
                 }
@@ -773,7 +773,7 @@ var unavailable_days_slots = [];
                         _this.parents(subcategory).remove();
                         jQuery('#tu-instructor-search').submit();
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             }, true);
@@ -814,10 +814,10 @@ var unavailable_days_slots = [];
 					jQuery('body').find('.tuturn-preloader-section').remove();
                     if (response.type == 'success') {
                         jQuery('.tuturn-popup').modal('hide');
-                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 10000 });
                         window.location.reload();
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
 				}
 			});
@@ -987,7 +987,7 @@ var unavailable_days_slots = [];
                                 window.location.href = response.login;
                             }, 100);
                         } else {
-                            stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                            stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                         }
                     }
                 }
@@ -1039,7 +1039,7 @@ var unavailable_days_slots = [];
                                 window.location.href = response.login;
                             }, 100);
                         } else {
-                            stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                            stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                         }
                     }
                 }
@@ -1098,7 +1098,7 @@ var unavailable_days_slots = [];
                         jQuery('#tu-start-time-filter').select2();
                         jQuery('#tu-end-time-filter').select2();
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
 
@@ -1152,7 +1152,7 @@ var unavailable_days_slots = [];
                         }
 
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             });
@@ -1185,7 +1185,7 @@ var unavailable_days_slots = [];
             history.pushState({}, null, new_url);
 
             if (dataObj.info_someone_else == 'on' && (dataObj.info_email.trim() == '' || !ValidEmail(dataObj.info_email.trim()))) {
-                stickyAlert('Validation Error', 'Please add the valid email address', { classList: 'danger', autoclose: 3000 });
+                stickyAlert('Validation Error', 'Please add the valid email address', { classList: 'danger', autoclose: 10000 });
                 return;
             }
             jQuery('body').append(loader_html);
@@ -1210,7 +1210,7 @@ var unavailable_days_slots = [];
                         jQuery('.tu-bookingstep4').show();
                         jQuery('.tu-wizserviceslist').mCustomScrollbar();
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             });
@@ -1253,7 +1253,7 @@ var unavailable_days_slots = [];
                     if (response.type == 'success') {
                         window.location.replace(response.checkout_url);
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             });
@@ -1288,7 +1288,7 @@ var unavailable_days_slots = [];
                     if (response.type == 'success') {
                         window.location.replace(response.checkout_url);
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             });
@@ -1366,7 +1366,7 @@ var unavailable_days_slots = [];
 
                             sortableListItems('time_accordionwrapper');
                         } else {
-                            stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                            stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                         }
                     }
                 });
@@ -1475,7 +1475,7 @@ var unavailable_days_slots = [];
                         jQuery('#timeslot').append(load_generated_timeslot_popup);
                         sortableListItems('time_accordionwrapper');
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             });
@@ -1528,10 +1528,10 @@ var unavailable_days_slots = [];
                     this_.attr("disabled", false);
                     this_.removeClass("tu-btnloader");
                     if (response.type === 'success') {
-                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 10000 });
                         window.location.reload();
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             });
@@ -1572,7 +1572,7 @@ var unavailable_days_slots = [];
                         load_unavailable_days_popup = load_unavailable_days_popup(unavailable_slots);
                         jQuery('.tu-appointment-content-area').html(load_unavailable_days_popup);
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             });
@@ -1603,10 +1603,10 @@ var unavailable_days_slots = [];
                     this_.attr("disabled", false);
                     this_.removeClass("tu-btnloader");
                     if (response.type == 'success') {
-                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'success', autoclose: 10000 });
                         window.location.reload();
                     } else {
-                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                        stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                     }
                 }
             });
@@ -1902,11 +1902,11 @@ if (google_signin_btn != null) {
                                 jQuery('#tuturn-modal-popup #tuturn-model-body').html(load_usertype_popup);
                                 jQuery('#tuturn-modal-popup').modal('show');
                             } else {
-                                stickyAlert(response.title, response.message, { classList: 'success', autoclose: 3000 });
+                                stickyAlert(response.title, response.message, { classList: 'success', autoclose: 10000 });
                                 window.location.replace(response.redirect);
                             }
                         } else {
-                            stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 3000 });
+                            stickyAlert(response.title, response.message, { classList: 'danger', autoclose: 10000 });
                         }
                     }
                 });
