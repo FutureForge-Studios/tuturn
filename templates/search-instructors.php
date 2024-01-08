@@ -631,3 +631,4 @@ $total_posts = $instructors_data->found_posts;
 </section>
 <?php
 get_footer();
+

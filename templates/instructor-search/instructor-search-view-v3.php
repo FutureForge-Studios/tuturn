@@ -51,21 +51,21 @@ if(!empty( $mediaGallery )){
     }
 } 
 ?>
-<div class="tu-instructors">
-    <?php if(!empty($default_placeholder)){ ?>
-        <figure>
-            <img src="<?php echo esc_url($default_placeholder)?>" alt="<?php esc_attr_e('image','tuturn')?>">
-            <?php do_action('tuturn_featured_profile', $post->ID);?>
-        </figure>
-    <?php } ?>
-    <div class="tu-instructors_content">
-        <div class="tu-instructors_header">
-            <?php do_action('tuturn_instructor_image', $post); ?>
-            <?php
-            if(!empty($username) || !empty($location)) {?>
-                <div class="tu-instructors_title">
-                    <?php if(!empty($username)){?>
-                        <a href="<?php echo esc_url(get_permalink()); ?>">
+<a href="<?php echo esc_url(get_permalink()); ?>">
+    <div class="tu-instructors">
+        <?php if(!empty($default_placeholder)){ ?>
+            <figure>
+                <img src="<?php echo esc_url($default_placeholder)?>" alt="<?php esc_attr_e('image','tuturn')?>">
+                <?php do_action('tuturn_featured_profile', $post->ID);?>
+            </figure>
+        <?php } ?>
+        <div class="tu-instructors_content">
+            <div class="tu-instructors_header">
+                <?php do_action('tuturn_instructor_image', $post); ?>
+                <?php
+                if(!empty($username) || !empty($location)) {?>
+                    <div class="tu-instructors_title">
+                        <?php if(!empty($username)){?>
                             <h5>
                                 <?php if(!empty($username)){?>
                                     <span><?php echo esc_html($username)?></span>
@@ -74,31 +74,30 @@ if(!empty( $mediaGallery )){
                                     <i class="icon icon-check-circle"></i>
                                 <?php } ?>
                             </h5>
-                        </a>
-                    <?php }
-                    if(!empty($location)){?>
-                        <span><?php echo esc_html($location)?></span>
-                    <?php } ?>
+                        <?php }
+                        if(!empty($location)){?>
+                            <span><?php echo esc_html($location)?></span>
+                        <?php } ?>
+                    </div>
+                <?php } ?>
+            </div>
+            <?php if(!empty($hourly_rate)){ ?>
+                <div class="tu-instructors_price">
+                    <span><?php esc_html_e('Starting from:','tuturn')?> </span>
+                    <h5><?php tuturn_price_format($hourly_rate). esc_html_e('/hr','tuturn')?></h5>
                 </div>
             <?php } ?>
-        </div>
-        <?php if(!empty($hourly_rate)){ ?>
-            <div class="tu-instructors_price">
-                <span><?php esc_html_e('Starting from:','tuturn')?> </span>
-                <h5><?php tuturn_price_format($hourly_rate). esc_html_e('/hr','tuturn')?></h5>
-            </div>
-        <?php } ?>
-        <?php do_action('tuturn_teaching_preference', $post); ?>
-        <div class="tu-instructors_footer">
-            <div class="tu-rating">
-                <h6><?php echo number_format((float)$tu_average_rating, 1, '.', '');?></h6>
-                <i class="fas fa-star"></i>
-                <span>(<?php echo str_pad($tu_review_users, 2, '0', STR_PAD_LEFT);?>)</span>
-            </div>
-            <div class="tu-instructors_footer-right">
-                <?php do_action('tuturn_instructor_add_to_save', array('post'=>$post, 'label' => '')); ?>                
+            <?php do_action('tuturn_teaching_preference', $post); ?>
+            <div class="tu-instructors_footer">
+                <div class="tu-rating">
+                    <h6><?php echo number_format((float)$tu_average_rating, 1, '.', '');?></h6>
+                    <i class="fas fa-star"></i>
+                    <span>(<?php echo str_pad($tu_review_users, 2, '0', STR_PAD_LEFT);?>)</span>
+                </div>
+                <div class="tu-instructors_footer-right">
+                    <?php do_action('tuturn_instructor_add_to_save', array('post'=>$post, 'label' => '')); ?>                
+                </div>
             </div>
         </div>
     </div>
-</div>
-    
+</a>

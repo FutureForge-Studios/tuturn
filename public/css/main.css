@@ -179,7 +179,7 @@ figure {
 }
 a, a:hover {
   text-decoration: none;
-  color: #1DA1F2;
+  color: #07da9a;
   outline: none;
 }
 p {
@@ -257,18 +257,18 @@ address {
 }
 /** ====== Sass typography ====== **/
 body {
-  color: #1C1C1C;
+  color: #393939;
   letter-spacing: 0.005em;
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 8px;
-  color: #1C1C1C;
+  color: #393939;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: #1C1C1C;
+  color: #393939;
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-  color: #1C1C1C;
+  color: #393939;
 }
 /** ====== Social icon ====== **/
 .tu-socialmedia {
@@ -502,11 +502,11 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .tu-maintitle h4 {
   font-weight: 400;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-maintitle h4 span {
   font-weight: 600;
-  color: #6A307D;
+  color: #73fbd3;
 }
 .tu-maintitle h2 {
   font-weight: 600;
@@ -514,14 +514,14 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   max-width: 550px;
 }
 .tu-maintitle h2 span {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-maintitle h2 + p {
   padding-top: 20px;
 }
 .tu-maintitle p {
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
   font-size: 1rem;
   line-height: 1.625em;
 }
@@ -536,10 +536,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   color: #22C55E !important;
 }
 .tu-blue {
-  color: #1DA1F2 !important;
+  color: #07da9a !important;
 }
 .tu-orange {
-  color: #F97316 !important;
+  color: #07da9a !important;
 }
 /** --- pagination styling --- **/
 .tu-pagination {
@@ -589,8 +589,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 .tu-pagination ul li a:hover, .tu-pagination ul li .current, .tu-pagination ul li.active a {
   color: #fff;
-  border-color: #6A307D;
-  background-color: #6A307D;
+  border-color: #73fbd3;
+  background-color: #73fbd3;
 }
 .tu-pagination-prev {
   padding-right: 45px !important;
@@ -617,7 +617,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   fill: #1C1C1C;
 }
 .litepicker .container__days .day-item.is-end-date, .litepicker .container__days .day-item.is-start-date {
-  background: #6A307D;
+  background: #73fbd3;
   color: #ffffff;
 }
 .litepicker .container__days .day-item.is-start-date {
@@ -631,7 +631,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 .litepicker .container__days .day-item:hover {
   box-shadow: inset 0 0 0 2px #6A307D;
-  color: #1C1C1C;
+  color: #393939;
   border-radius: 25px;
 }
 .litepicker .container__months, .litepicker .container__months .month-item {
@@ -750,7 +750,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   justify-content: center;
   font-weight: 600;
   color: #ffffff;
-  background-color: #6A307D;
+  background-color: #07da9a;
   border-radius: 4px;
   padding: 0 24px;
   line-height: 48px;
@@ -783,7 +783,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 .tu-btn em, .tu-primbtn em, .woocommerce .cart .button em, .woocommerce .cart input.button em, .woocommerce #respond input#submit em, .woocommerce a.button em, .woocommerce button.button em, .woocommerce input.button em, .woocommerce #respond input#submit.alt em, .woocommerce a.button.alt em, .woocommerce button.button.alt em, .woocommerce input.button.alt em, #add_payment_method .wc-proceed-to-checkout a.checkout-button em, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button em, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button em, .tb-btn em, .tu-secbtn em, .tu-yellowbtn em, .tu-primbtn-lg em, .tu-primbtn-sm em, .tu-primbtn-icon em {
   font-style: normal;
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-btn em + i, .tu-primbtn em + i, .woocommerce .cart .button em + i, .woocommerce .cart input.button em + i, .woocommerce #respond input#submit em + i, .woocommerce a.button em + i, .woocommerce button.button em + i, .woocommerce input.button em + i, .woocommerce #respond input#submit.alt em + i, .woocommerce a.button.alt em + i, .woocommerce button.button.alt em + i, .woocommerce input.button.alt em + i, #add_payment_method .wc-proceed-to-checkout a.checkout-button em + i, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button em + i, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button em + i, .tb-btn em + i, .tu-secbtn em + i, .tu-yellowbtn em + i, .tu-primbtn-lg em + i, .tu-primbtn-sm em + i, .tu-primbtn-icon em + i {
   margin-left: 10px;
@@ -810,7 +810,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .tu-bookingbackstep, .tu-secbtn {
   border: 2px solid #DDDDDD;
   background-color: #ffffff;
-  color: #1C1C1C;
+  color: #393939;
   padding: 0 25px;
 }
 .tu-bookingbackstep::before, .tu-secbtn::before {
@@ -823,7 +823,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 .tu-bookingbackstep:hover, .tu-bookingbackstep:focus, .tu-secbtn:hover, .tu-secbtn:focus {
   background-color: #ffffff;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-primbtn-lg {
   height: 48px;
@@ -843,7 +843,7 @@ button.tu-primbtn, .woocommerce .cart button.button, .woocommerce button.button,
   font-size: 18px;
 }
 .tu-primbtn-orange {
-  background-color: #F97316;
+  background-color: #07da9a;
 }
 .tu-primbtn-gradient {
   background: linear-gradient(105.69deg, #EAB308 0%, #EF4444 43.23%);
@@ -851,14 +851,14 @@ button.tu-primbtn, .woocommerce .cart button.button, .woocommerce button.button,
 }
 .tu-yellowbtn {
   background-color: #FFD101;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-yellowbtn::before {
   background-color: transparent;
 }
 .tu-yellowbtn:hover, .tu-yellowbtn:focus {
   background-color: #FFD101;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-redbtn {
   background-color: #EF4444;
@@ -898,7 +898,7 @@ button.tu-primbtn, .woocommerce .cart button.button, .woocommerce button.button,
   width: 100%;
 }
 .form-group-wrap .tu-label {
-  color: #1C1C1C;
+  color: #393939;
   margin-bottom: 10px;
   font-weight: 600;
 }
@@ -926,7 +926,7 @@ button.tu-primbtn, .woocommerce .cart button.button, .woocommerce button.button,
 }
 .tu-label {
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .valid-feedback {
   font: 500 0.875rem, 1.7142857143em "Outfit", sans-serif;
@@ -938,13 +938,13 @@ button.tu-primbtn, .woocommerce .cart button.button, .woocommerce button.button,
 .form-control, .wpcf7-form-control, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], select, .uneditable-input, textarea, .olympus-theme .tu-themeform textarea, .olympus-theme .wpcf7-form textarea {
   padding: 0 19px;
   height: 48px;
-  color: #1C1C1C;
+  color: #393939;
   font-weight: 600;
   border: 1.5px solid #e1e1e1;
   border-radius: 4px;
   background-clip: unset;
   background-color: #fff;
-  caret-color: #1C1C1C;
+  caret-color: #393939;
 }
 .form-control::placeholder, .wpcf7-form-control::placeholder, input[type="text"]::placeholder, input[type="password"]::placeholder, input[type="datetime"]::placeholder, input[type="datetime-local"]::placeholder, input[type="date"]::placeholder, input[type="month"]::placeholder, input[type="time"]::placeholder, input[type="week"]::placeholder, input[type="number"]::placeholder, input[type="email"]::placeholder, input[type="url"]::placeholder, input[type="search"]::placeholder, input[type="tel"]::placeholder, input[type="color"]::placeholder, select::placeholder, .uneditable-input::placeholder, textarea::placeholder, .olympus-theme .tu-themeform textarea::placeholder, .olympus-theme .wpcf7-form textarea::placeholder {
   color: #999999;
@@ -994,7 +994,7 @@ input[type="number"] {
 .wpcf7 form .wpcf7-response-output {
   margin: 20px 0 0;
   padding: 10px 20px;
-  color: #1C1C1C;
+  color: #393939;
 }
 .woocommerce form .form-row textarea.input-text, .woocommerce form .form-row .olympus-theme .tu-themeform textarea.input-text, .olympus-theme .tu-themeform .woocommerce form .form-row textarea.input-text, .woocommerce form .form-row .olympus-theme .wpcf7-form textarea.input-text, .olympus-theme .wpcf7-form .woocommerce form .form-row textarea.input-text, .woocommerce-page form .form-row textarea.input-text, .woocommerce-page form .form-row .olympus-theme .tu-themeform textarea.input-text, .olympus-theme .tu-themeform .woocommerce-page form .form-row textarea.input-text, .woocommerce-page form .form-row .olympus-theme .wpcf7-form textarea.input-text, .olympus-theme .wpcf7-form .woocommerce-page form .form-row textarea.input-text, textarea.form-control, .olympus-theme .tu-themeform textarea.form-control, .olympus-theme .wpcf7-form textarea.form-control {
   resize: none;
@@ -1112,13 +1112,13 @@ form p span i {
   width: 50px;
   display: block;
   line-height: 50px;
-  color: #6A307D;
+  color: #73fbd3;
   text-align: center;
   font-size: 1.125rem;
-  background: #6A307D;
+  background: #73fbd3;
 }
 .tu-searchntn:hover, .tu-searchntn:focus {
-  color: #6A307D;
+  color: #73fbd3;
 }
 .tu-righticon {
   position: relative;
@@ -1320,7 +1320,7 @@ form p span i {
 .select2-container--default .select2-results__group + .select2-results__options .select2-results__option[aria-selected="true"]:before {
   content: "";
   font-weight: 900;
-  color: #6A307D;
+  color: #73fbd3;
 }
 /** --- select2 multipe --- **/
 .select2 {
@@ -1402,7 +1402,7 @@ form p span i {
   opacity: 1;
 }
 .select2-container--default .select2-selection--multiple .select2-selection__clear {
-  color: #6A307D;
+  color: #73fbd3;
   position: absolute;
   right: 35px;
   top: 0;
@@ -1547,7 +1547,7 @@ select[required] + .select2 .select2-selection__choice + .select2-search.select2
   border-radius: 3px 0px 0px 3px;
 }
 .tu-hasinputicon a {
-  background: #6A307D;
+  background: #73fbd3;
   border-radius: 0px 3px 3px 0px;
   width: 48px;
   height: 48px;
@@ -1616,7 +1616,7 @@ select[required] + .select2 .select2-selection__choice + .select2-search.select2
   margin: 0;
   display: flex;
   align-items: center;
-  color: #1C1C1C;
+  color: #393939;
   cursor: pointer;
 }
 .tu-check label:before {
@@ -1629,11 +1629,11 @@ select[required] + .select2 .select2-selection__choice + .select2-search.select2
   background-color: #ffffff;
 }
 .tu-check label span {
-  color: #1C1C1C;
+  color: #393939;
   font-weight: 600;
 }
 .tu-check label > a {
-  color: #1DA1F2;
+  color: #07da9a;
   margin: 0 0 0 10px;
 }
 .tu-checksm input[type="checkbox"] + label::before {
@@ -1696,7 +1696,7 @@ input.tu-showplaceholder::placeholder {
   line-height: 48px;
 }
 .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, #add_payment_method .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button:hover {
-  background-color: #6A307D;
+  background-color: #73fbd3;
 }
 .woocommerce-cart .cart-collaterals .cart_totals table {
   border-collapse: collapse;
@@ -1715,7 +1715,7 @@ input.tu-showplaceholder::placeholder {
 .wpcf7-form label {
   width: 100%;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   margin-bottom: 10px;
 }
 .wpcf7-form label .wpcf7-form-control-wrap .wpcf7-form-control {
@@ -1752,8 +1752,8 @@ input.tu-showplaceholder::placeholder {
   height: 40px;
   font-weight: 600;
   color: #ffffff;
-  background-color: #6A307D;
-  border-color: #6A307D;
+  background-color: #73fbd3;
+  border-color: #73fbd3;
   border-radius: 4px;
   padding: 0 24px;
   z-index: 0;
@@ -1785,7 +1785,7 @@ input.tu-showplaceholder::placeholder {
 }
 .wpcf7-submit em {
   font-style: normal;
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .wpcf7-submit em + i {
   margin-left: 10px;
@@ -2027,7 +2027,7 @@ input.tu-showplaceholder::placeholder {
   display: none;
 }
 .btn.tu-sticky-alert {
-  color: #1C1C1C !important;
+  color: #393939 !important;
 }
 .olympus-theme .woocommerce-billing-fields__field-wrapper .select2.select2-container {
   padding: 0;
@@ -2075,13 +2075,13 @@ input.tu-showplaceholder::placeholder {
 }
 .tu-menudropdown a {
   align-items: center;
-  color: #1C1C1C;
+  color: #393939;
   padding: 12px 20px;
   display: flex !important;
   font: 400 0.9375rem/1.7333333333em "Outfit", sans-serif;
 }
 .tu-menudropdown a:hover, .tu-menudropdown a:focus {
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-menudropdown a i {
   color: #999999;
@@ -2181,19 +2181,19 @@ input.tu-showplaceholder::placeholder {
 .tu-footer_maintitle h4 {
   margin: 0;
   font-weight: 400;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-footer_maintitle h2 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-footer_row {
   row-gap: 30px;
 }
 .tu-footer .tu-footertitle {
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   margin-bottom: 20px;
 }
 .tu-footer .tu-footerlist {
@@ -2222,16 +2222,16 @@ input.tu-showplaceholder::placeholder {
 .tu-footer .tu-footerlist li a {
   width: 100%;
   display: flex;
-  color: #484848;
+  color: #393939;
   font-size: 1rem;
   align-items: center;
   line-height: 1.625em;
 }
 .tu-footer .tu-footerlist li a:hover span {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-footer .tu-footerlist li a span {
-  color: #484848;
+  color: #393939;
   margin-left: auto;
   font-size: 0.9375rem;
   line-height: 1.6em;
@@ -2243,7 +2243,7 @@ input.tu-showplaceholder::placeholder {
   display: none;
 }
 .tu-footerlist li a:hover {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 /** ====== index page style ====== **/
 main {
@@ -2257,7 +2257,7 @@ main {
   font: 700 3.25rem/1.3076923077em "Outfit", sans-serif;
 }
 .tu-banner_title h1 span {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-banner_title > a {
   padding: 0 16px;
@@ -2317,7 +2317,7 @@ main {
   padding: 5px 16px;
   display: inline-block;
   border-radius: 4px;
-  background-color: #6A307D;
+  background-color: #73fbd3;
 }
 .tu-starthere {
   top: -28px;
@@ -2421,12 +2421,12 @@ main {
 .tu-oursuccess_info h4 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-oursuccess_info p {
   margin: 0;
   font-size: 1rem;
-  color: #1C1C1C;
+  color: #393939;
   line-height: 1.625em;
 }
 .tu-cardtag {
@@ -2495,7 +2495,7 @@ main {
   font-size: 17px;
 }
 .tu-instructors_title > span {
-  color: #484848;
+  color: #393939;
   display: block;
 }
 .tu-instructors_price {
@@ -2509,7 +2509,7 @@ main {
 }
 .tu-instructors_price h5 {
   font-weight: 600;
-  color: #1DA1F2;
+  color: #07da9a;
   margin-bottom: 0;
   display: inline-block;
 }
@@ -2592,7 +2592,7 @@ main {
 .tu-rating h6 {
   font-weight: 600;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-rating h6 + i {
   padding-left: 6px;
@@ -2605,7 +2605,7 @@ main {
   padding-left: 6px;
 }
 .tu-rating > span {
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-splidedots .splide__pagination {
   position: static;
@@ -2683,7 +2683,7 @@ main {
   padding: 0;
   margin-bottom: 0;
   font-size: 1rem;
-  color: #1C1C1C;
+  color: #393939;
   line-height: 1.625em;
   background: transparent;
 }
@@ -2723,8 +2723,8 @@ main {
   font-family: "icomoon";
 }
 .tu-splidearrow .splide__arrow:hover {
-  background-color: #6A307D;
-  border-color: #6A307D;
+  background-color: #73fbd3;
+  border-color: #73fbd3;
   color: #ffffff;
 }
 .tu-splidearrow .splide__arrow--prev::before {
@@ -2948,7 +2948,7 @@ main {
   padding: 200px 0 222px;
 }
 .tu-bannerv2 .tu-bannerinfo {
-  background-color: #1DA1F2;
+  background-color: #07da9a;
 }
 .tu-bannerv2 .tu-linedimage img {
   opacity: 0.3;
@@ -2958,7 +2958,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #6A307D;
+  background-color: #73fbd3;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -2980,14 +2980,14 @@ main {
   line-height: 1.6em;
 }
 .tu-bannerv2 .tu-banner_title > a {
-  background-color: #1DA1F2;
+  background-color: #07da9a;
 }
 .tu-bannerv2 .tu-secbtn {
   background-color: transparent;
   color: #ffffff;
 }
 .tu-bannerv2 .tu-banner_title h1 span {
-  color: #F97316;
+  color: #07da9a;
 }
 .tu-bannerv2_img {
   right: 0;
@@ -3029,14 +3029,14 @@ main {
 .tu-eduplatform_info h5 {
   font-weight: 600;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-eduplatform_info h5 + p {
   padding-top: 4px;
 }
 .tu-eduplatform_info p {
   margin: 0;
-  color: #1C1C1C;
+  color: #393939;
   font-size: 1rem;
   line-height: 1.625em;
 }
@@ -3060,21 +3060,21 @@ main {
 .tu-sucesstories h5 {
   font-weight: 600;
   margin: 0 0 20px;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-sucesstories blockquote {
   font-size: 1rem;
   line-height: 1.625em;
 }
 .tu-sucesstories h4 {
-  color: #1C1C1C;
+  color: #393939;
   font-size: 1.125rem;
   line-height: 1.4444444444em;
 }
 .tu-sucesstories span {
   font-weight: 400;
   font-size: 1rem;
-  color: #1C1C1C;
+  color: #393939;
   line-height: 1.625em;
 }
 .tu-featurelist .splide__track {
@@ -3160,7 +3160,7 @@ main {
   font-size: 17px;
 }
 .tu-authorname span {
-  color: #484848;
+  color: #393939;
   display: block;
 }
 .tu-authorlist {
@@ -3174,7 +3174,7 @@ main {
 }
 .tu-authorlist li > span {
   display: inline-flex;
-  color: #484848;
+  color: #393939;
   justify-content: space-between;
   width: 100%;
   word-break: break-all;
@@ -3183,7 +3183,7 @@ main {
   max-width: 80%;
   font-weight: 600;
   text-align: right;
-  color: #1C1C1C;
+  color: #393939;
   padding-left: 10px;
 }
 .tu-authorlist li ~ li {
@@ -3224,14 +3224,14 @@ main {
   color: #ffffff;
 }
 .tu-bannerv3 .tu-banner_title > a {
-  background-color: #1DA1F2;
+  background-color: #07da9a;
 }
 .tu-bannerv3 .tu-secbtn {
   background-color: transparent;
   color: #ffffff;
 }
 .tu-bannerv3 .tu-banner_title h1 span {
-  color: #F97316;
+  color: #07da9a;
 }
 .tu-bannerv3_img img {
   max-width: initial;
@@ -3310,10 +3310,10 @@ main {
   line-height: inherit;
 }
 .tu-popsearchitem li a:hover {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-popsearchitem li:hover::after {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-popsearchitem li:last-child::after {
   content: "";
@@ -3391,7 +3391,7 @@ main {
 }
 .tu-categorieslist li p {
   margin: 0;
-  color: #1C1C1C;
+  color: #393939;
   justify-content: space-between;
 }
 .tu-categorieslist li p span {
@@ -3453,7 +3453,7 @@ main {
   -webkit-box-orient: vertical;
 }
 .tu-recentposts_title a:hover h6 {
-  color: #1DA1F2;
+  color: #07da9a;
   text-decoration: underline;
 }
 .tu-recentposts_title a h6 {
@@ -3537,7 +3537,7 @@ main {
 }
 .tu-taglinks li a {
   font-weight: 400;
-  color: #1DA1F2;
+  color: #07da9a;
   line-height: inherit;
   display: inline-block;
 }
@@ -3545,7 +3545,7 @@ main {
   content: ",";
   right: -5px;
   font-size: 18px;
-  color: #1DA1F2;
+  color: #07da9a;
   position: absolute;
 }
 .tu-blogtitle {
@@ -3579,7 +3579,7 @@ main {
   padding-top: 27px;
 }
 .tu-mainlist li {
-  color: #1C1C1C;
+  color: #393939;
   position: relative;
   padding-left: 28px;
   line-height: inherit;
@@ -3598,7 +3598,7 @@ main {
 }
 .tu-featurelist .tu-description {
   padding: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-featurelist .tu-mainlist {
   margin: 26px 0 0;
@@ -3691,7 +3691,7 @@ main {
   line-height: inherit;
 }
 .tu-taglinksm li a {
-  color: #1DA1F2;
+  color: #07da9a;
   line-height: inherit;
 }
 .tu-articleinfo {
@@ -3729,7 +3729,7 @@ main {
   -webkit-box-orient: vertical;
 }
 .tu-arrticltitle h4 a:hover, .tu-arrticltitle h5 a:hover {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-articleauthor {
   align-items: center;
@@ -3777,7 +3777,7 @@ main {
   font-weight: 400;
 }
 .tu-articleauth i + h6 a {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-commentlist {
   flex-wrap: nowrap;
@@ -3849,11 +3849,11 @@ main {
   padding-top: 10px;
 }
 .tu-input-counter span {
-  color: #1C1C1C;
+  color: #393939;
   font-weight: 600;
 }
 .tu-input-counter b {
-  color: #1C1C1C;
+  color: #393939;
   font-weight: 600;
 }
 .tu-input-counter em {
@@ -3988,7 +3988,7 @@ main {
   font-weight: 600;
 }
 .tu-blogbox .tu-arrticltitle h4 a:hover {
-  color: #6A307D;
+  color: #73fbd3;
 }
 .tu-blogbox .tu-articleauth i {
   font-size: 18px;
@@ -4036,7 +4036,7 @@ main {
 .tu-sort h3 {
   font-weight: 400;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-sort h3 span {
   font-weight: 600;
@@ -4197,18 +4197,18 @@ main {
 .tu-searchtags li span {
   display: flex;
   align-items: center;
-  color: #484848;
+  color: #393939;
   font-weight: 600;
 }
 .tu-searchtags li span a {
-  color: #484848;
+  color: #393939;
   display: inline-block;
   font-size: 1rem;
   line-height: 1;
   margin-left: 6px;
 }
 .tu-searchtags li span a:hover {
-  color: #484848;
+  color: #393939;
 }
 .tu-dbsidenav {
   padding: 20px;
@@ -4222,7 +4222,7 @@ main {
   display: flex;
   font-weight: 600;
   position: relative;
-  color: #1C1C1C;
+  color: #393939;
   align-items: center;
 }
 .tu-asidetitle h5::after {
@@ -4442,7 +4442,7 @@ main {
   line-height: 40px;
   position: absolute;
   text-align: center;
-  background: #6A307D;
+  background: #73fbd3;
   display: none;
   border-radius: 10px 0 0 10px;
 }
@@ -4529,7 +4529,7 @@ main {
 }
 .tu-listinginfo_price > h4 {
   margin-bottom: 0;
-  color: #1DA1F2;
+  color: #07da9a;
   font-weight: 600;
 }
 .tu-listinginfo_description {
@@ -4545,7 +4545,7 @@ main {
 .tu-listinginfo_service > h6 {
   font-weight: 600;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-listinginfo_btn {
   padding: 19px 20px;
@@ -4613,13 +4613,13 @@ main {
 }
 .tu-listing-location > span > em {
   font-style: normal;
-  color: #484848;
+  color: #393939;
   padding-left: 6px;
 }
 .tu-listing-location > address {
   margin: 0;
   font-style: normal;
-  color: #484848;
+  color: #393939;
   display: flex;
   align-items: center;
 }
@@ -4639,7 +4639,7 @@ main {
   max-width: 200px;
 }
 .tu-service-list li span {
-  color: #1C1C1C;
+  color: #393939;
   align-items: center;
   color: #1C1C1C;
   display: flex;
@@ -4656,10 +4656,10 @@ main {
   color: #22C55E;
 }
 .tu-blueclr {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-orangeclr {
-  color: #F97316;
+  color: #07da9a;
 }
 .tu-iconheart > .tu-linkheart, .tu-iconheart {
   align-items: center;
@@ -4705,7 +4705,7 @@ main {
 }
 .tu-listinginfo_two:hover .tu-listing-slider .tu-btn {
   color: #fff;
-  background: #6A307D;
+  background: #73fbd3;
 }
 .tu-listinginfo_two > .tu-featuretag {
   top: 29px;
@@ -4863,7 +4863,7 @@ main {
   padding: 10px;
   display: flex;
   max-width: 200px;
-  color: #1C1C1C;
+  color: #393939;
   align-items: center;
   border-radius: 4px;
   background: #F7F8FC;
@@ -4883,7 +4883,7 @@ main {
 .tu-listinginfo_wrapper .tu-instructors_service p {
   font-weight: 600;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-listinginfo_wrapper .tu-serviceslist {
   margin-top: 20px;
@@ -4912,7 +4912,7 @@ main {
 .tu-savedtites h4 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   align-items: center;
 }
 .tu-savedtites h4 i {
@@ -4925,7 +4925,7 @@ main {
 }
 .tu-savedtites p {
   margin: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-savedtites > span {
   display: inline-block;
@@ -5085,7 +5085,7 @@ main {
 .tu-boxtitle h3 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-dayslist {
   gap: 10px;
@@ -5239,12 +5239,12 @@ main {
 .tu-howit-steps_info > h5 {
   font-weight: 600;
   margin-bottom: 10px;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-howit-steps_info > p {
   margin-bottom: 0;
   font-size: 1rem;
-  color: #1C1C1C;
+  color: #393939;
   line-height: 1.625em;
 }
 .tu-step-tag {
@@ -5257,13 +5257,13 @@ main {
   background-color: black;
 }
 .tu-orange-bgclr {
-  background-color: #F97316;
+  background-color: #07da9a;
 }
 .tu-green-bgclr {
   background-color: #22C55E;
 }
 .tu-blue-bgclr {
-  background-color: #1DA1F2;
+  background-color: #07da9a;
 }
 .tu-purple-bgclr {
   background-color: #6366F1;
@@ -5299,7 +5299,7 @@ main {
 .tu-processing-list li p {
   font-size: 1rem;
   margin: 0 0 0 78px;
-  color: #1C1C1C;
+  color: #393939;
   line-height: 1.625em;
 }
 .tu-processing-list li + li {
@@ -5329,7 +5329,7 @@ main {
 }
 .tu-processinglist-info h4 {
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   margin: 0 0 0 16px;
 }
 .tu-iconpurple_bgclr {
@@ -5357,16 +5357,16 @@ main {
 .tu-pricingtop h4 {
   margin: 0;
   font-weight: 400;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-pricingtop h2 {
   font-weight: 600;
   margin: 0 0 20px;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-pricingtop p {
   margin: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-pricinglist {
   padding: 0;
@@ -5380,7 +5380,7 @@ main {
   flex: max(316px, 100%/5);
 }
 .tu-plandetail h4 {
-  color: #1C1C1C;
+  color: #393939;
   font-weight: 600;
   margin: 0;
 }
@@ -5390,7 +5390,7 @@ main {
 .tu-plandetail bdi .woocommerce-Price-currencySymbol, .tu-plandetail bdi {
   margin: 0;
   display: flex;
-  color: #F97316;
+  color: #07da9a;
   align-items: center;
   font-weight: 600;
 }
@@ -5399,7 +5399,7 @@ main {
   display: flex;
   align-items: center;
   font-weight: 600;
-  color: #F97316;
+  color: #07da9a;
 }
 .tu-plandetail h3 del bdi {
   font-weight: 700;
@@ -5413,13 +5413,13 @@ main {
 }
 .tu-plandetail h3 span {
   margin-left: 10px;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-plandetail span {
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-plandetail p {
-  color: #1C1C1C;
+  color: #393939;
   margin: 20px 0;
 }
 .tu-planlist {
@@ -5452,7 +5452,7 @@ main {
   line-height: inherit;
 }
 .tu-planperks li span {
-  color: #1C1C1C;
+  color: #393939;
   align-items: center;
   justify-content: space-between;
 }
@@ -5500,7 +5500,7 @@ main {
 .tu-btnplain {
   border: 2px solid #eeeeee;
   background: transparent;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-btnplain:hover, .tu-btnplain:focus {
   background: #F97316;
@@ -5523,7 +5523,7 @@ main {
 }
 .tu-package-plan .tu-description p {
   margin: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-package-heading {
   display: flex;
@@ -5566,12 +5566,12 @@ main {
   padding-top: 6px;
   margin-bottom: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-onging {
   padding: 0 10px;
   font-weight: 700;
-  color: #1C1C1C;
+  color: #393939;
   background: #FDD943;
   display: inline-block;
 }
@@ -5613,7 +5613,7 @@ main {
 .tu-package-list li h6 {
   font-weight: 600;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-package-list li em {
   padding-left: 3px;
@@ -5621,7 +5621,7 @@ main {
 }
 .tu-package-list li span {
   display: block;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-package-list_title em {
   padding-left: 1px;
@@ -5827,14 +5827,14 @@ main {
 .tu-boxsmtitle h4 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-boxsmtitle a {
   font-weight: 600;
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-boxsmtitle a:hover {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-labels {
   margin: -5px;
@@ -5871,7 +5871,7 @@ main {
 }
 .tu-settingform .tu-label {
   width: 100%;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-status-filter {
   padding: 0;
@@ -5909,7 +5909,7 @@ main {
   padding-top: 10px;
 }
 .tu-input-counter span {
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-input-counter b {
   font-weight: 600;
@@ -5930,7 +5930,7 @@ main {
   justify-content: flex-end;
 }
 .tu-btnarea-two span {
-  color: #1C1C1C;
+  color: #393939;
   padding-right: 30px;
 }
 .tu-side-tabs {
@@ -5947,7 +5947,7 @@ main {
   display: flex;
   text-align: left;
   border-radius: 0;
-  color: #1C1C1C !important;
+  color: #393939 !important;
   position: relative;
   padding: 12px 30px;
   align-items: center;
@@ -5967,7 +5967,7 @@ main {
   left: 0;
   top: 0;
   position: absolute;
-  background-color: #6A307D;
+  background-color: #73fbd3;
 }
 .tu-side-tabs .nav-item .nav-link > i {
   font-size: 18px;
@@ -6001,7 +6001,7 @@ main {
 .modal-header h5 {
   font-weight: 600;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-close .icon {
   margin: 0 !important;
@@ -6026,7 +6026,7 @@ main {
   margin-top: 15px;
 }
 .tu-btngray {
-  color: #1C1C1C;
+  color: #393939;
   background: #f7f7f7;
   border-color: #DDDDDD;
 }
@@ -6108,14 +6108,14 @@ main {
 .tu-uploadphoto h5 {
   padding: 2px 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   margin-bottom: 0;
 }
 .tu-uploadphoto h5 input {
   display: none;
 }
 .tu-uploadphoto h5 label {
-  color: #1DA1F2;
+  color: #07da9a;
   margin: 0;
   display: inline-block;
   cursor: copy;
@@ -6124,7 +6124,7 @@ main {
 .tu-uploadphoto p {
   margin: 10px 0 0;
   max-width: 430px;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-uploadphoto .tu-tpbtn {
   margin-top: 20px;
@@ -6252,7 +6252,7 @@ main {
 .tu-popuptitle h4, .tb-popuptitle h4 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-popuptitle .close, .tb-popuptitle .close {
   font-size: 30px;
@@ -6286,7 +6286,7 @@ main {
   margin-left: 20px;
 }
 .tb-btn {
-  background-color: #F97316;
+  background-color: #07da9a;
 }
 .wp-editor-wrap {
   width: 100%;
@@ -6296,7 +6296,7 @@ main {
   margin: 0;
 }
 .tu-emptydata h6 a {
-  color: #1DA1F2;
+  color: #07da9a;
   display: inline-block;
 }
 .tu-bookingwrapper {
@@ -6351,7 +6351,7 @@ main {
 }
 .tu-bookername > span {
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-bookingonfo {
   padding: 0;
@@ -6373,7 +6373,7 @@ main {
 .tu-bookingonfo > li h6 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-bookingonfo > li h6 + a {
   margin-left: 10px;
@@ -6383,15 +6383,15 @@ main {
 }
 .tu-bookingonfo > li p {
   margin: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-bookingonfo > li > a {
-  color: #1DA1F2;
+  color: #07da9a;
   align-self: center;
   font: 500 0.875rem/1.7142857143em "Outfit", sans-serif;
 }
 .tu-bookingonfo > li > a:focus, .tu-bookingonfo > li > a:hover {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-bookingonfo p:empty {
   display: none;
@@ -6420,7 +6420,7 @@ main {
   border-color: #DDDDDD;
   min-width: 44px;
   padding: 0 8px;
-  background: #F97316;
+  background: #07da9a;
 }
 .tu-btnorangesm i {
   color: #ffffff;
@@ -6495,7 +6495,7 @@ main {
   font-weight: 600;
   padding: 7px 24px;
   align-items: center;
-  background: #1DA1F2;
+  background: #07da9a;
   border-radius: 4px;
   justify-content: center;
 }
@@ -6590,14 +6590,14 @@ main {
 }
 .tu-side-tabs .tu-nestedmenu .nav-link.tab-active span, .tu-side-tabs .tu-nestedmenu .nav-link.active span {
   font-weight: 600;
-  color: #6A307D;
+  color: #73fbd3;
 }
 .tu-side-tabs .nav-item.active > .nav-link:before {
   height: 100%;
 }
 .tu-nestedmenu > a.tab-active {
   font-weight: 600 !important;
-  color: #6A307D !important;
+  color: #73fbd3 !important;
 }
 .tu-slider-holder {
   width: 100%;
@@ -6833,7 +6833,7 @@ main {
 .tu-protutordetail h3 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   align-items: center;
   display: inline-flex;
 }
@@ -6922,7 +6922,7 @@ main {
   padding: 5px;
   display: flex;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   position: relative;
   list-style-type: none;
 }
@@ -6935,12 +6935,12 @@ main {
 }
 .tu-showmore {
   font-weight: 600;
-  color: #1DA1F2;
+  color: #07da9a;
   display: inline-block;
   background-color: #ffffff;
 }
 .tu-showmore:focus, .tu-showmore:hover {
-  color: #1DA1F2;
+  color: #07da9a;
   border-color: transparent;
 }
 .tu-tutorreview {
@@ -6957,7 +6957,7 @@ main {
 .tu-tutorreview li > span {
   font-weight: 600;
   display: flex;
-  color: #1C1C1C;
+  color: #393939;
   flex-wrap: nowrap;
 }
 .tu-tutorreview li > span i {
@@ -6973,7 +6973,7 @@ main {
 .tu-tutorreview li > span i em {
   font-weight: 600;
   display: inline-block;
-  color: #1C1C1C;
+  color: #393939;
   margin: 0 0 0 10px;
 }
 .tu-tutorreview li > span i em span {
@@ -7015,7 +7015,7 @@ main {
 .tu-startingrate h4 {
   margin: 0;
   font-weight: 600;
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-actionbts {
   padding: 20px;
@@ -7027,11 +7027,11 @@ main {
 .tu-actionbts > a {
   display: flex;
   font-weight: 400;
-  color: #1DA1F2;
+  color: #07da9a;
   align-items: center;
 }
 .tu-actionbts > a:focus, .tu-actionbts > a:hover {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-actionbts > a > i {
   line-height: 26px;
@@ -7162,7 +7162,7 @@ main {
 }
 .tu-tabswrapper > .tu-description p {
   margin: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-tabswrapper > .tu-description p + p {
   margin-top: 26px;
@@ -7206,12 +7206,12 @@ main {
 .tu-tabstitle h4 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-expinfo h4 {
   cursor: pointer;
   margin: 0 0 10px;
-  color: #1C1C1C;
+  color: #393939;
   display: inline-block;
   font: 600 1.125rem/1.4444444444em "Outfit", sans-serif;
 }
@@ -7273,11 +7273,11 @@ main {
 }
 .tu-accordioneduc {
   margin: 20px 0 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-accordioneduc p {
   margin: 20px 0 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-accordionedu .tu-accordion-item ~ .tu-accordion-item {
   margin: 30px 0 0;
@@ -7314,7 +7314,7 @@ main {
   width: 166px;
   max-width: 100%;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   padding-bottom: 10px;
 }
 .tu-icanteach > li ~ li {
@@ -7358,7 +7358,7 @@ main {
 .tu-asideinfo h6 {
   margin: 0;
   font-weight: 400;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-featureinclude {
   margin: 0;
@@ -7385,7 +7385,7 @@ main {
   font-size: 14px;
   line-height: 24px;
   display: inline-block;
-  color: #1C1C1C;
+  color: #393939;
   margin: 0 0 0 10px;
   font-family: "Open Sans", sans-serif;
 }
@@ -7393,10 +7393,10 @@ main {
   font-size: 16px;
 }
 .tu-colorblue {
-  color: #1DA1F2 !important;
+  color: #07da9a !important;
 }
 .tu-colororange {
-  color: #F97316 !important;
+  color: #07da9a !important;
 }
 .tu-contactbox {
   padding: 30px 29px 29px;
@@ -7405,7 +7405,7 @@ main {
 .tu-contactbox > h6 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-contactbox .tu-listinfo {
   margin: 16px 0 0;
@@ -7438,7 +7438,7 @@ main {
 .tu-listinfo li h6 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-listinfo li h6 span, .tu-listinfo li h6 em {
   color: #999999;
@@ -7447,7 +7447,7 @@ main {
   margin: 16px 0 0;
 }
 .tu-listinfo li a {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-bg-maroon {
   background-color: #EC407A !important;
@@ -7483,7 +7483,7 @@ main {
 }
 .tu-boxtitle > h4 {
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   margin-bottom: 20px;
 }
 .tu-tabswrapper .tu-boxtitle + .tu-commentarea {
@@ -7517,7 +7517,7 @@ main {
   justify-content: space-between;
   position: relative;
   border-radius: 4px;
-  background: #1DA1F2;
+  background: #07da9a;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
 }
 .tu-Joincommunity_content h4, .tu-Joincommunity_content p {
@@ -7574,7 +7574,7 @@ main {
   font-weight: 900;
   z-index: 1;
   font-size: 24px;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-syncthumbnail {
   display: flex;
@@ -7613,8 +7613,8 @@ main {
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 .tu-syncthumbnail .splide__arrow:hover {
-  background-color: #6A307D;
-  border-color: #6A307D;
+  background-color: #73fbd3;
+  border-color: #73fbd3;
   color: #ffffff;
 }
 .tu-syncthumbnail .splide__arrow svg {
@@ -7778,7 +7778,7 @@ main {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: #6A307D;
+  background-color: #73fbd3;
   height: 3px;
   width: 0;
 }
@@ -7853,7 +7853,7 @@ main {
 .tu-formarea_title h5 {
   font-weight: 600;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-formarea_title::after {
   color: #999999;
@@ -7907,7 +7907,7 @@ main {
 .tu-formarea_list li a h6 {
   font-weight: 600;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-formarea_list li a span {
   font-weight: 600;
@@ -7951,14 +7951,14 @@ main {
 .tu-undayslist_title h6 {
   font-weight: 600;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-undayslist_title h5 {
   font-weight: 600;
   margin-bottom: 0;
 }
 .tu-undayslist_title h5 b {
-  color: #1C1C1C;
+  color: #393939;
   padding-right: 17px;
   font-weight: inherit;
 }
@@ -8461,7 +8461,7 @@ main {
   border: 1.5px solid #e1e1e1;
 }
 .tu-daysfilter .tu-check input[type=checkbox]:checked + label {
-  color: #1C1C1C;
+  color: #393939;
   background-color: #ffffff;
 }
 .tu-daysfilter li {
@@ -8900,13 +8900,13 @@ main {
   font-size: 28px;
   line-height: 38px;
   margin: 0 0 10px;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-alertpopup > p {
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
-  color: #1C1C1C;
+  color: #393939;
 }
 .bg-lightgreen {
   width: 90px;
@@ -9060,7 +9060,7 @@ main {
   max-width: 100px;
 }
 .tu-faq-category-active {
-  box-shadow: inset 0px -3px 0px #6A307D;
+  box-shadow: inset 0px -3px 0px #73fbd3;
   border-radius: 10px;
 }
 .tu-faq_desp {
@@ -9069,7 +9069,7 @@ main {
 .tu-faq_desp h5 {
   font-weight: 600;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-faq_desp span {
   color: #999999;
@@ -9105,7 +9105,7 @@ main {
 .tu-acoridan_title h3 {
   font-weight: 600;
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
   padding-bottom: 20px;
 }
 .tu-faq-section.tu-main-section {
@@ -9141,13 +9141,13 @@ main {
   font-size: 24px;
   line-height: 18px;
   position: absolute;
-  color: #1C1C1C;
+  color: #393939;
   font-family: "icomoon" !important;
 }
 .tu-accordion-faq_title h5 {
   margin-bottom: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   padding-right: 30px;
 }
 .tu-accordion-faq_info {
@@ -9156,7 +9156,7 @@ main {
 }
 .tu-accordion-faq_info p {
   margin: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-accordion-faq_info p ~ p {
   padding-top: 26px;
@@ -9230,7 +9230,7 @@ main {
 }
 .tu-maintitle h5, .tu-maintitle h2 {
   margin-bottom: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-maintitle + .tu-main-description {
   padding-top: 20px;
@@ -9338,12 +9338,12 @@ main {
 .tu-login-right_title h2 {
   font-weight: 700;
   margin-bottom: 0;
-  color: #6A307D;
+  color: #73fbd3;
 }
 .tu-login-right_title h3 {
   font-weight: 700;
   margin: 10px 0 0 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-login-form .form-group-wrap {
   width: 100%;
@@ -9408,10 +9408,10 @@ main {
 }
 .tu-lost-password a {
   width: auto !important;
-  color: #6A307D;
+  color: #73fbd3;
 }
 .tu-lost-password a:hover {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-lost-password .tu-password-clr_light {
   color: #999999;
@@ -9462,7 +9462,7 @@ main {
   text-align: center;
   border-radius: 50%;
   margin-right: 10px;
-  background: #6A307D;
+  background: #73fbd3;
 }
 .tuturn-auth-back:hover {
   color: #1C1C1C;
@@ -9482,12 +9482,12 @@ main {
 .tu-booking-epmty-field p {
   margin-bottom: 0;
   max-width: 780px;
-  color: #1C1C1C;
+  color: #393939;
   text-align: center;
 }
 .tu-booking-epmty-field h4 {
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   margin: 0 0 0.5rem;
 }
 .tu-dbtitle {
@@ -9499,11 +9499,11 @@ main {
 .tu-dbtitle h5 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-dbtitle h3 {
   margin: 0;
-  color: #1C1C1C;
+  color: #393939;
   align-items: center;
   font: 600 1.375rem/1.3636363636em "Outfit", sans-serif;
 }
@@ -9557,7 +9557,7 @@ table.dhb-table > thead > tr th:first-child {
   color: #1C1C1C;
 }
 .dhb-table.table > tbody > tr td a {
-  color: #1DA1F2;
+  color: #07da9a;
   display: inline-block;
 }
 .dhb-table.table > tbody > tr td .tu-linksm {
@@ -9566,7 +9566,7 @@ table.dhb-table > thead > tr th:first-child {
   color: #1C1C1C;
 }
 .dhb-table.table > tbody > tr td .tu-linksm:hover {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .dhb-table.table > tbody > tr td .tu-linksm i {
   font-size: 18px;
@@ -9662,17 +9662,17 @@ table.dhb-table > :not(:first-child) {
   margin: 0;
   width: 100%;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   padding-right: 10px;
 }
 .tu-incomeprice h5 > a {
   float: right;
-  color: #1DA1F2;
+  color: #07da9a;
   align-items: center;
 }
 .tu-incomeprice h5 > a i {
   font-size: 18px;
-  color: #1DA1F2;
+  color: #07da9a;
   vertical-align: middle;
   display: inline-block;
   margin: 0 0 0 5px;
@@ -9686,15 +9686,15 @@ table.dhb-table > :not(:first-child) {
   flex: none;
   float: right;
   font-weight: 500;
-  color: #1DA1F2;
+  color: #07da9a;
   align-items: center;
 }
 .tu-incomeprice a:focus, .tu-incomeprice a:hover {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-incomeprice a i {
   font-size: 18px;
-  color: #1DA1F2;
+  color: #07da9a;
   vertical-align: middle;
   display: inline-block;
   margin: 0 0 0 5px;
@@ -9759,7 +9759,7 @@ table.dhb-table > :not(:first-child) {
   color: #999999;
 }
 .tu-payoutmethods .tu-payoutmethods__item p a {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-payoutmethods .tu-payoutmethods__item ~ .tu-payoutmethods__item {
   margin-top: 20px;
@@ -9791,7 +9791,7 @@ table.dhb-table > :not(:first-child) {
   font-weight: 600;
 }
 .tu-methodwrap a:focus, .tu-methodwrap a:hover {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-methodwrap a i {
   font-size: 20px;
@@ -9807,7 +9807,7 @@ table.dhb-table > :not(:first-child) {
 .tu-selectwrapper > span {
   flex: none;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
   display: inline-block;
   margin: 0 20px 0 0;
 }
@@ -9829,7 +9829,7 @@ table.dhb-table > :not(:first-child) {
 }
 .tu-paymentdesp p {
   margin: 0;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-accountmethods {
   padding: 0;
@@ -9890,7 +9890,7 @@ table.dhb-table > :not(:first-child) {
 .tu-incoiveinfo h4 {
   font-weight: 600;
   margin: 0 0 16px;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-boxdark {
   background: #0A0F26;
@@ -9951,7 +9951,7 @@ table.dhb-table > :not(:first-child) {
 .tu-billinfo li h6 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-billinfo li h5 {
   margin: 0;
@@ -9968,7 +9968,7 @@ table.dhb-table > :not(:first-child) {
 .tu-invoiceamount h3 {
   margin: 0;
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-billadd {
   box-shadow: inset 0px -1px 0px #eeeeee;
@@ -10131,12 +10131,12 @@ table.tu-tableinvoice tbody tr:last-child {
 }
 .tu-boxsm h5 > a {
   float: right;
-  color: #1DA1F2;
+  color: #07da9a;
   align-items: center;
 }
 .tu-boxsm h5 > a i {
   font-size: 18px;
-  color: #1DA1F2;
+  color: #07da9a;
   vertical-align: middle;
   display: inline-block;
   margin: 0 0 0 5px;
@@ -10270,7 +10270,7 @@ table.tu-tableinvoice tbody tr:last-child {
   top: -1px;
 }
 .tu-accountmethods li a {
-  color: #1DA1F2;
+  color: #07da9a;
 }
 .tu-timeslotform {
   padding: 30px;
@@ -10452,7 +10452,7 @@ table.tu-tableinvoice tbody tr:last-child {
   margin-left: 10px;
   padding: 8px 18px;
   align-items: center;
-  background: #F97316;
+  background: #07da9a;
   border-radius: 4px;
   justify-content: center;
   cursor: pointer;
@@ -10469,7 +10469,7 @@ table.tu-tableinvoice tbody tr:last-child {
 }
 .tu-right-side-list li .select2-container--default .select2-selection--single .select2-selection__placeholder {
   font-weight: 600;
-  color: #1C1C1C;
+  color: #393939;
 }
 .tu-right-side-list li .select2-container {
   height: auto !important;
@@ -10591,7 +10591,7 @@ table.tu-tableinvoice tbody tr:last-child {
 .tu-date {
   font-weight: 400;
   font-size: 0.9375rem !important;
-  color: #1C1C1C !important;
+  color: #393939 !important;
   font-family: "Open Sans", sans-serif;
   line-height: 1.6em !important;
 }
@@ -10606,7 +10606,7 @@ table.tu-tableinvoice tbody tr:last-child {
 .tu-icon-holderv2 a {
   display: flex;
   align-items: center;
-  color: #484848 !important;
+  color: #393939 !important;
 }
 .tu-icon-holderv2 a + a {
   padding-left: 20px;
@@ -11109,7 +11109,7 @@ table.tu-tableinvoice tbody tr:last-child {
     border-radius: 4px;
     text-align: center;
     font-family: "icomoon";
-    background: #6A307D;
+    background: #73fbd3;
     margin-left: auto;
   }
   .tu-open-usermenu > a:after {
@@ -11226,7 +11226,7 @@ table.tu-tableinvoice tbody tr:last-child {
     top: 60px;
   }
   .tu-headerv2 .tu-navbar .navbar-collapse .nav-item:not(.tu-loginlink) a, .tu-headerv2 .navbar-nav > .menu-item-has-children > a, .tu-headerv2 .tu-navbar .navbar-collapse .nav-item a {
-    color: #1C1C1C;
+    color: #393939;
   }
   .tu-navbar.tu-navbarvtwo .navbar-collapse .nav-item a::before {
     background-color: #EAB308;

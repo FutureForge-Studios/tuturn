@@ -398,207 +398,180 @@ if (!function_exists('tuturn_apply_custom_price_to_cart_item')) {
  * @return
  */
 if (!function_exists('tuturn_woo_convert_item_session_to_order_meta')) {
-    add_action( 'woocommerce_new_order_item', 'tuturn_woo_convert_item_session_to_order_meta',  1, 3 );
-    function tuturn_woo_convert_item_session_to_order_meta( $item_id, $item, $order_id ) {
-        global $tuturn_settings;
-        $order = wc_get_order($order_id);
+	add_action( 'woocommerce_new_order_item', 'tuturn_woo_convert_item_session_to_order_meta',  1, 3 );
+	function tuturn_woo_convert_item_session_to_order_meta( $item_id, $item, $order_id ) {
+		global $tuturn_settings;
+		$order          	= wc_get_order($order_id);
+		$order_total		= $order->get_total();
+		$order_total  		= !empty($order_total) ? $order_total : 0.0;
+		$order_total_tax	= $order->get_total_tax();
+		$order_total_tax  	= !empty($order_total_tax) ? $order_total_tax : 0.0;
+        $payment_type		= !empty($item->legacy_values['payment_type']) ? $item->legacy_values['payment_type'] : '';
 
-        // Check if $order is a valid order object
-        if ( !is_a($order, 'WC_Order') ) {
-            // Handle the error appropriately, maybe log it or return early
-            error_log("Invalid order object for order ID: " . $order_id);
-            return;
-        }
 
-        $order_total = $order->get_total();
-        $order_total = !empty($order_total) ? $order_total : 0.0;
-        $order_total_tax = $order->get_total_tax();
-        $order_total_tax = !empty($order_total_tax) ? $order_total_tax : 0.0;
-        $payment_type = !empty($item->legacy_values['payment_type']) ? $item->legacy_values['payment_type'] : '';
+		if( !empty($payment_type) && $payment_type === 'package' ){
+			if ( !empty( $item->legacy_values['cart_data'] ) ) {
+				wc_add_order_item_meta( $item_id, 'cus_woo_product_data', $item->legacy_values['cart_data'] );
+				update_post_meta( $order_id, 'cus_woo_product_data', $item->legacy_values['cart_data'] );
+			}
 
-        // ... rest of your original code ...
-		if (!function_exists('tuturn_woo_convert_item_session_to_order_meta')) {
-			add_action( 'woocommerce_new_order_item', 'tuturn_woo_convert_item_session_to_order_meta',  1, 3 );
-			function tuturn_woo_convert_item_session_to_order_meta( $item_id, $item, $order_id ) {
-				global $tuturn_settings;
-				$order          	= wc_get_order($order_id);
-				$order_total		= $order->get_total();
-				$order_total  		= !empty($order_total) ? $order_total : 0.0;
-				$order_total_tax	= $order->get_total_tax();
-				$order_total_tax  	= !empty($order_total_tax) ? $order_total_tax : 0.0;
-				$payment_type		= !empty($item->legacy_values['payment_type']) ? $item->legacy_values['payment_type'] : '';
-		
-		
-				if( !empty($payment_type) && $payment_type === 'package' ){
-					if ( !empty( $item->legacy_values['cart_data'] ) ) {
-						wc_add_order_item_meta( $item_id, 'cus_woo_product_data', $item->legacy_values['cart_data'] );
-						update_post_meta( $order_id, 'cus_woo_product_data', $item->legacy_values['cart_data'] );
+			if ( !empty( $item->legacy_values['package_id'] ) ) {
+				update_post_meta( $order_id, 'package_id', $item->legacy_values['package_id'] );
+			}
+
+			if ( !empty( $item->legacy_values['payment_type'] ) ) {
+				update_post_meta( $order_id, 'payment_type', $item->legacy_values['payment_type'] );
+			}
+
+			$instructor_id    = !empty($item->legacy_values['cart_data']['instructor_id']) ? $item->legacy_values['cart_data']['instructor_id'] : '';
+			update_post_meta( $order_id, 'instructor_id', $instructor_id );			
+			/* email to instructor on package buy */
+			if (class_exists('Tuturn_Email_Helper')) {
+				$emailData	= array();
+				if (class_exists('TuturnPackagesEmail')) {
+					$package_id = $item->legacy_values['package_id'];
+					$product    					= wc_get_product( $package_id );
+					$package_name  					= $product->get_title();
+					$order_price					= $product->get_price();					
+					$instructor_data				= get_userdata($instructor_id);
+					$instructorprofile_name			= !empty($instructor_data->display_name) ? $instructor_data->display_name : '';
+					$instructorprofile_email		= !empty($instructor_data->user_email) ? $instructor_data->user_email : '';
+					$instructor_profile_id 			= tuturn_get_linked_profile_id( $instructor_id);
+					/* Instructor details */
+					$instructor_profileData   		= get_post_meta($instructor_profile_id, 'profile_details', true);
+					$instructor_name				= !empty($instructor_profileData['first_name']) ? $instructor_profileData['first_name'] : '';
+					$instructor_contact_detail		= !empty($instructor_profileData['contact_info']) ? $instructor_profileData['contact_info'] : array();
+					$email_helper 					= new TuturnPackagesEmail();
+					$emailData['instructor_name'] 	= !empty($instructor_name) ? $instructor_name : $instructorprofile_name;
+					$emailData['instructor_email'] 	= !empty($instructor_contact_detail['email']) ? $instructor_contact_detail['email'] : $instructorprofile_email;
+					$emailData['order_id'] 			= !empty($order_id) ? $order_id : 0;
+					$emailData['order_amount'] 		= !empty($order_price) ? $order_price : 0;
+					$emailData['login_url'] 		= '';
+					$emailData['package_name'] 		= $package_name;
+
+					if ( !empty($tuturn_settings['email_package_instructor'])) {
+						$email_helper->package_purchase_instructor_email($emailData);
 					}
-		
-					if ( !empty( $item->legacy_values['package_id'] ) ) {
-						update_post_meta( $order_id, 'package_id', $item->legacy_values['package_id'] );
+					
+				}
+			}
+		} else if( !empty($payment_type) && $payment_type === 'booking' ){
+            if ( !empty( $item->legacy_values['cart_data'] ) ) {
+                $admin_share        	= !empty($item->legacy_values['cart_data']['admin_shares']) ? $item->legacy_values['cart_data']['admin_shares'] : 0.0;
+				$instructor_shares		= !empty($item->legacy_values['cart_data']['instructor_shares']) ? $item->legacy_values['cart_data']['instructor_shares'] : 0.0;
+                $price    				= !empty($item->legacy_values['cart_data']['price']) ? $item->legacy_values['cart_data']['price'] : 0.00;
+
+				wc_add_order_item_meta( $item_id, 'cus_woo_product_data', $item->legacy_values['cart_data'] );
+				update_post_meta( $order_id, 'cus_woo_product_data', $item->legacy_values['cart_data'] );
+                update_post_meta( $order_id, 'payment_type', $item->legacy_values['payment_type'] );
+				
+				$order_total  = !empty($order_total) ? $order_total : $price;
+				if(!empty($order_total_tax)){
+					$order_total	= $order_total	- $order_total_tax;
+				}
+				$service_fee		= tuturn_commission_fee($order_total);
+				$admin_share   		= !empty($service_fee['admin_shares']) ? $service_fee['admin_shares'] : $admin_share;
+				$instructor_shares	= !empty($service_fee['instructor_shares']) ? $service_fee['instructor_shares'] : $instructor_shares;
+
+                if ( !empty( $item->legacy_values['cart_data']['booked_data'] ) ) {
+                    $booked_data    	= !empty($item->legacy_values['cart_data']['booked_data']) ? $item->legacy_values['cart_data']['booked_data'] : array();
+                    $student_id    		= !empty($item->legacy_values['cart_data']['student_id']) ? $item->legacy_values['cart_data']['student_id'] : '';
+                    $instructor_id    	= !empty($item->legacy_values['cart_data']['instructor_id']) ? $item->legacy_values['cart_data']['instructor_id'] : '';
+                    $booked_slots   	= !empty($booked_data['booked_slots']) ? $booked_data['booked_slots'] : array();
+                    $booking_user   	= !empty($booked_data['information']['info_someone_else']) ? 1 : 0;
+					if(!empty($booked_data['product']) && is_array($booked_data['product']) && count($booked_data['product'])>0){
+						$service_names	= array_column($booked_data['product'], 'name');
+						update_post_meta( $order_id, 'service_names', $service_names );
 					}
-		
-					if ( !empty( $item->legacy_values['payment_type'] ) ) {
-						update_post_meta( $order_id, 'payment_type', $item->legacy_values['payment_type'] );
+
+					$booked_slots_dates	= array_keys($booked_slots);
+					update_post_meta( $order_id, '_booking_date', $booked_slots_dates );
+
+                    update_post_meta( $order_id, 'is_user_booking', $booking_user );
+                    update_post_meta( $order_id, 'booking_status', 'pending' );
+					if(!empty($booked_slots)){
+						update_post_meta( $order_id, '_booking_slots', $booked_slots );	
 					}
-		
-					$instructor_id    = !empty($item->legacy_values['cart_data']['instructor_id']) ? $item->legacy_values['cart_data']['instructor_id'] : '';
-					update_post_meta( $order_id, 'instructor_id', $instructor_id );			
-					/* email to instructor on package buy */
-					if (class_exists('Tuturn_Email_Helper')) {
+					
+					update_post_meta( $order_id, 'student_id',$student_id );
+    				update_post_meta( $order_id, 'instructor_id',$instructor_id );
+					$instructor_profile_id 		= tuturn_get_linked_profile_id( $instructor_id );
+					$student_profile_id 		= tuturn_get_linked_profile_id( $student_id );
+					update_post_meta( $order_id, '_linked_profile',$student_profile_id );
+					update_post_meta( $order_id, 'student_profile_id',$student_profile_id );
+    				update_post_meta( $order_id, 'instructor_profile_id',$instructor_profile_id );
+
+					/* save extra data for booking slots */
+					do_action('tuturn_add_extra_slots_meta', $order_id, $booked_data);
+
+					/* email to instructor and student on booking */
+					if (class_exists('Tuturn_Email_helper')) {
 						$emailData	= array();
-						if (class_exists('TuturnPackagesEmail')) {
-							$package_id = $item->legacy_values['package_id'];
-							$product    					= wc_get_product( $package_id );
-							$package_name  					= $product->get_title();
-							$order_price					= $product->get_price();					
-							$instructor_data				= get_userdata($instructor_id);
-							$instructorprofile_name			= !empty($instructor_data->display_name) ? $instructor_data->display_name : '';
-							$instructorprofile_email		= !empty($instructor_data->user_email) ? $instructor_data->user_email : '';
-							$instructor_profile_id 			= tuturn_get_linked_profile_id( $instructor_id);
-							/* Instructor details */
+						if (class_exists('TuturnOrderStatuses')) {
+							$default_chat_mesage	= wp_kses(__('Congratulations! You have hired for the booking "{{booking_name}}".<br/> with order link: {{order_link}}.', 'tuturn'),
+								array(
+									'a' => array(
+									'href' => array(),
+									'title' => array()
+									),
+									'br' => array(),
+									'em' => array(),
+									'strong' => array(),
+								));
+							$instructor_profile_id 			= tuturn_get_linked_profile_id( $instructor_id, 'instructor' );
+							$student_profile_id 			= tuturn_get_linked_profile_id( $student_id,'', 'student' );
+							/* instructor details */
 							$instructor_profileData   		= get_post_meta($instructor_profile_id, 'profile_details', true);
 							$instructor_name				= !empty($instructor_profileData['first_name']) ? $instructor_profileData['first_name'] : '';
 							$instructor_contact_detail		= !empty($instructor_profileData['contact_info']) ? $instructor_profileData['contact_info'] : array();
-							$email_helper 					= new TuturnPackagesEmail();
+							$instructor_data				= get_userdata($instructor_id);
+							$instructorprofile_name			= !empty($instructor_data->display_name) ? $instructor_data->display_name : '';
+							$instructorprofile_email		= !empty($instructor_data->user_email) ? $instructor_data->user_email : '';
+							/* student details */
+							$student_profileData   			= get_post_meta($student_profile_id, 'profile_details', true);
+							$student_name					= !empty($student_profileData['first_name']) ? $student_profileData['first_name'] : '';
+							$student_contact_detail			= !empty($student_profileData['contact_info']) ? $student_profileData['contact_info'] : array();
+							$student_data					= get_userdata($student_id);
+							$studentprofile_name			= !empty($student_data->display_name) ? $student_data->display_name : '';
+							$studentprofile_email			= !empty($student_data->user_email) ? $student_data->user_email : '';
+							$email_helper 					= new TuturnOrderStatuses();
 							$emailData['instructor_name'] 	= !empty($instructor_name) ? $instructor_name : $instructorprofile_name;
 							$emailData['instructor_email'] 	= !empty($instructor_contact_detail['email']) ? $instructor_contact_detail['email'] : $instructorprofile_email;
+							$emailData['student_name'] 		= !empty($student_name) ? $student_name : $studentprofile_name;
+							$emailData['student_email']		= !empty($student_contact_detail['email']) ? $student_contact_detail['email'] : $studentprofile_email;
 							$emailData['order_id'] 			= !empty($order_id) ? $order_id : 0;
-							$emailData['order_amount'] 		= !empty($order_price) ? $order_price : 0;
-							$emailData['login_url'] 		= '';
-							$emailData['package_name'] 		= $package_name;
-		
-							if ( !empty($tuturn_settings['email_package_instructor'])) {
-								$email_helper->package_purchase_instructor_email($emailData);
+							$emailData['order_amount'] 		= $order->get_total();
+							$emailData['sender_id']         = $instructor_id; //instructor id
+							$emailData['receiver_id']       = $student_id; //student id
+							$emailData['login_url'] 		= Tuturn_Profile_Menu::tuturn_profile_menu_link('booking', $instructor_id, true, 'listings');
+ 							$service_names					= esc_html__('Tutor Service', 'tuturn');
+							$current_page_link  			= get_permalink().'profile-settings/';
+							$invoice_url  					= add_query_arg(array('tab' => 'invoices','mode' => 'detail', 'id'=>intval( $order_id)), $current_page_link);
+							if( apply_filters( 'tuturn_chat_solution_guppy',false ) === true && $tuturn_settings['hire_instructor_chat_switch'] == true){
+								$message 		= !empty($tuturn_settings['hire_instructor_chat_mesage']) ? $tuturn_settings['hire_instructor_chat_mesage'] : $default_chat_mesage;
+								$chat_mesage  	= str_replace("{{booking_name}}", $service_names, $message);
+								$chat_mesage  	= str_replace("{{order_link}}", $invoice_url, $chat_mesage);
+								do_action('wpguppy_send_message_to_user', $student_id, $instructor_id, $chat_mesage);
 							}
-							
-						}
-					}
-				} else if( !empty($payment_type) && $payment_type === 'booking' ){
-					if ( !empty( $item->legacy_values['cart_data'] ) ) {
-						$admin_share        	= !empty($item->legacy_values['cart_data']['admin_shares']) ? $item->legacy_values['cart_data']['admin_shares'] : 0.0;
-						$instructor_shares		= !empty($item->legacy_values['cart_data']['instructor_shares']) ? $item->legacy_values['cart_data']['instructor_shares'] : 0.0;
-						$price    				= !empty($item->legacy_values['cart_data']['price']) ? $item->legacy_values['cart_data']['price'] : 0.00;
-		
-						wc_add_order_item_meta( $item_id, 'cus_woo_product_data', $item->legacy_values['cart_data'] );
-						update_post_meta( $order_id, 'cus_woo_product_data', $item->legacy_values['cart_data'] );
-						update_post_meta( $order_id, 'payment_type', $item->legacy_values['payment_type'] );
-						
-						$order_total  = !empty($order_total) ? $order_total : $price;
-						if(!empty($order_total_tax)){
-							$order_total	= $order_total	- $order_total_tax;
-						}
-						$service_fee		= tuturn_commission_fee($order_total);
-						$admin_share   		= !empty($service_fee['admin_shares']) ? $service_fee['admin_shares'] : $admin_share;
-						$instructor_shares	= !empty($service_fee['instructor_shares']) ? $service_fee['instructor_shares'] : $instructor_shares;
-		
-						if ( !empty( $item->legacy_values['cart_data']['booked_data'] ) ) {
-							$booked_data    	= !empty($item->legacy_values['cart_data']['booked_data']) ? $item->legacy_values['cart_data']['booked_data'] : array();
-							$student_id    		= !empty($item->legacy_values['cart_data']['student_id']) ? $item->legacy_values['cart_data']['student_id'] : '';
-							$instructor_id    	= !empty($item->legacy_values['cart_data']['instructor_id']) ? $item->legacy_values['cart_data']['instructor_id'] : '';
-							$booked_slots   	= !empty($booked_data['booked_slots']) ? $booked_data['booked_slots'] : array();
-							$booking_user   	= !empty($booked_data['information']['info_someone_else']) ? 1 : 0;
-							if(!empty($booked_data['product']) && is_array($booked_data['product']) && count($booked_data['product'])>0){
-								$service_names	= array_column($booked_data['product'], 'name');
-								update_post_meta( $order_id, 'service_names', $service_names );
-							}
-		
-							$booked_slots_dates	= array_keys($booked_slots);
-							update_post_meta( $order_id, '_booking_date', $booked_slots_dates );
-		
-							update_post_meta( $order_id, 'is_user_booking', $booking_user );
-							update_post_meta( $order_id, 'booking_status', 'pending' );
-							if(!empty($booked_slots)){
-								update_post_meta( $order_id, '_booking_slots', $booked_slots );	
-							}
-							
-							update_post_meta( $order_id, 'student_id',$student_id );
-							update_post_meta( $order_id, 'instructor_id',$instructor_id );
-							$instructor_profile_id 		= tuturn_get_linked_profile_id( $instructor_id );
-							$student_profile_id 		= tuturn_get_linked_profile_id( $student_id );
-							update_post_meta( $order_id, '_linked_profile',$student_profile_id );
-							update_post_meta( $order_id, 'student_profile_id',$student_profile_id );
-							update_post_meta( $order_id, 'instructor_profile_id',$instructor_profile_id );
-		
-							/* save extra data for booking slots */
-							do_action('tuturn_add_extra_slots_meta', $order_id, $booked_data);
-		
-							/* email to instructor and student on booking */
-							if (class_exists('Tuturn_Email_helper')) {
-								$emailData	= array();
-								if (class_exists('TuturnOrderStatuses')) {
-									$default_chat_mesage	= wp_kses(__('Congratulations! You have hired for the booking "{{booking_name}}".<br/> with order link: {{order_link}}.', 'tuturn'),
-										array(
-											'a' => array(
-											'href' => array(),
-											'title' => array()
-											),
-											'br' => array(),
-											'em' => array(),
-											'strong' => array(),
-										));
-									$instructor_profile_id 			= tuturn_get_linked_profile_id( $instructor_id, 'instructor' );
-									$student_profile_id 			= tuturn_get_linked_profile_id( $student_id,'', 'student' );
-									/* instructor details */
-									$instructor_profileData   		= get_post_meta($instructor_profile_id, 'profile_details', true);
-									$instructor_name				= !empty($instructor_profileData['first_name']) ? $instructor_profileData['first_name'] : '';
-									$instructor_contact_detail		= !empty($instructor_profileData['contact_info']) ? $instructor_profileData['contact_info'] : array();
-									$instructor_data				= get_userdata($instructor_id);
-									$instructorprofile_name			= !empty($instructor_data->display_name) ? $instructor_data->display_name : '';
-									$instructorprofile_email		= !empty($instructor_data->user_email) ? $instructor_data->user_email : '';
-									/* student details */
-									$student_profileData   			= get_post_meta($student_profile_id, 'profile_details', true);
-									$student_name					= !empty($student_profileData['first_name']) ? $student_profileData['first_name'] : '';
-									$student_contact_detail			= !empty($student_profileData['contact_info']) ? $student_profileData['contact_info'] : array();
-									$student_data					= get_userdata($student_id);
-									$studentprofile_name			= !empty($student_data->display_name) ? $student_data->display_name : '';
-									$studentprofile_email			= !empty($student_data->user_email) ? $student_data->user_email : '';
-									$email_helper 					= new TuturnOrderStatuses();
-									$emailData['instructor_name'] 	= !empty($instructor_name) ? $instructor_name : $instructorprofile_name;
-									$emailData['instructor_email'] 	= !empty($instructor_contact_detail['email']) ? $instructor_contact_detail['email'] : $instructorprofile_email;
-									$emailData['student_name'] 		= !empty($student_name) ? $student_name : $studentprofile_name;
-									$emailData['student_email']		= !empty($student_contact_detail['email']) ? $student_contact_detail['email'] : $studentprofile_email;
-									$emailData['order_id'] 			= !empty($order_id) ? $order_id : 0;
-									$emailData['order_amount'] 		= $order->get_total();
-									$emailData['sender_id']         = $instructor_id; //instructor id
-									$emailData['receiver_id']       = $student_id; //student id
-									$emailData['login_url'] 		= Tuturn_Profile_Menu::tuturn_profile_menu_link('booking', $instructor_id, true, 'listings');
-									 $service_names					= esc_html__('Tutor Service', 'tuturn');
-									$current_page_link  			= get_permalink().'profile-settings/';
-									$invoice_url  					= add_query_arg(array('tab' => 'invoices','mode' => 'detail', 'id'=>intval( $order_id)), $current_page_link);
-									if( apply_filters( 'tuturn_chat_solution_guppy',false ) === true && $tuturn_settings['hire_instructor_chat_switch'] == true){
-										$message 		= !empty($tuturn_settings['hire_instructor_chat_mesage']) ? $tuturn_settings['hire_instructor_chat_mesage'] : $default_chat_mesage;
-										$chat_mesage  	= str_replace("{{booking_name}}", $service_names, $message);
-										$chat_mesage  	= str_replace("{{order_link}}", $invoice_url, $chat_mesage);
-										do_action('wpguppy_send_message_to_user', $student_id, $instructor_id, $chat_mesage);
-									}
-		
-									if (!empty($tuturn_settings['email_new_booking_instructor'])) {
-										$email_helper->new_booking_instructor_email($emailData);
-									}
-		
-									if ( !empty($tuturn_settings['email_new_booking_student'])) {
-										$email_helper->new_booking_student_email($emailData);
-									}
-		
-									do_action('noty_push_notification', $emailData);
-								}
-							}
-						}
-						update_post_meta( $order_id, 'admin_share', $admin_share );
-						update_post_meta( $order_id, 'instructor_shares', $instructor_shares );	
-					}
-				}
-			}
-		}
-		
 
-        // Ensure to include all the code that was originally in this function
-        // after the check for the $order object.
+							if (!empty($tuturn_settings['email_new_booking_instructor'])) {
+								$email_helper->new_booking_instructor_email($emailData);
+							}
+
+							if ( !empty($tuturn_settings['email_new_booking_student'])) {
+								$email_helper->new_booking_student_email($emailData);
+							}
+
+							do_action('noty_push_notification', $emailData);
+						}
+					}
+                }
+                update_post_meta( $order_id, 'admin_share', $admin_share );
+                update_post_meta( $order_id, 'instructor_shares', $instructor_shares );	
+			}
+        }
     }
 }
-
 
 /**
  * Display order detail
